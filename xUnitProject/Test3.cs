@@ -14,12 +14,23 @@ namespace xUnitProject
             this.output = output;
         }
 
-        [Fact]
-        public void Test1()
+        void Impl(int x)
+        {
+            Assert.True(x == 42);
+
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(42)]
+
+        [InlineData(32)]
+        public void Test1( int x )
         {
             output.WriteLine("Some out line");
-            Assert.True(true);
-        }
+            Impl(x);
+            
+       }
         
         [Fact]
         public void Test2()
