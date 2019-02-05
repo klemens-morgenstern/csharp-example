@@ -5,11 +5,13 @@ platform: Any CPU
 #environment:
   #PATH: "%BOOST_LIBRARYDIR%;%PATH%"
 
+before_build:
+  - nuget restore
+
 build_script:
   - msbuild
   
 after_build:
-before_build:
 test_script:
 
 
