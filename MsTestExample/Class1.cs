@@ -13,7 +13,7 @@ namespace CSharpExample
 
         void nested()
         {
-            Assert.AreEqual(2s,2);
+            Assert.AreEqual(2,2);
 
         }
         
