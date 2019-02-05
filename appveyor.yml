@@ -18,7 +18,7 @@ build_script:
   
 after_build:
 test_script:
-  - %test_cmd%
+  - "%test_cmd%"
 
 on_finish:
   - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py | python
