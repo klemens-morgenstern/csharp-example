@@ -9,7 +9,7 @@ before_build:
   - nuget restore
 
 build_script:
-  - msbuild
+  - msbuild /p:RunTest=false
   
 after_build:
 test_script:
