@@ -7,8 +7,8 @@ environment:
   matrix:
     - test_cmd: packages\xunit.runner.console.2.4.1\tools\net452\xunit.console xUnitProject\bin\Debug\xUnitProject.dll -xml xunit.xml
     - test_cmd: packages\NUnit.ConsoleRunner.3.9.0\tools\nunit3-console.exe NUnitExample\bin\Debug\NUnitExample.dll
-    - test_cmd: cd MsTestExample && dotnet test
-        
+    - test_cmd: MSTest /testcontainer:MsTestExample\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+#cd MsTestExample && dotnet test
   
 before_build:
   - nuget restore
