@@ -6,7 +6,7 @@ environment:
   PATH: "%BOOST_LIBRARYDIR%;%PATH%"
 
 build_script:
-  - msbuild
+  - dotnet build
   
 after_build:
 before_build:
