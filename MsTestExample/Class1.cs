@@ -29,7 +29,7 @@ namespace CSharpExample
         [DataRow(1)]
         public void ReturnFalseGivenValuesLessThan2(int value)
         {
-            Assert.IsFalse(value >= 0, $"{value} should not be prime");
+            Assert.IsFalse(value < 0, $"{value} should not be prime");
         }
         
     }
