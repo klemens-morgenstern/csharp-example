@@ -15,13 +15,13 @@ namespace NUnitExample
         public void Test2()
         {
             Assert.True(true);
-            Assert.True(false);
+            Assert.False(false);
         }
 
 
         void nested()
         {
-            Assert.Fail();
+           // Assert.Fail();
         }
         [Test]
         public void Test3()

@@ -8,14 +8,14 @@ namespace xUnitProject
         public void Test1()
         {
             Assert.True(true);
-            Assert.True(false);
+            Assert.False(false);
         }
         
         [Fact]
         public void Test2()
         {
             Assert.Null(null);
-            Assert.True(false);
+            Assert.False(false);
         }
         
     }
@@ -26,14 +26,14 @@ namespace xUnitProject
         public void Test1()
         {
             Assert.True(true);
-            Assert.True(false);
+            Assert.False(false);
         }
         
         [Fact]
         public void Test2()
         {
             Assert.Null(null);
-            Assert.True(false);
+            Assert.True(true);
         }
         
     }

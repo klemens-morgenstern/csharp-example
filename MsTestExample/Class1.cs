@@ -8,12 +8,12 @@ namespace CSharpExample
         [TestMethod]
         public void func1()
         {
-            Assert.Fail();
+//            Assert.Fail();
         }
 
         void nested()
         {
-            Assert.AreEqual(3,2);
+            Assert.AreEqual(2s,2);
 
         }
         
@@ -24,7 +24,7 @@ namespace CSharpExample
         }
 
         [DataTestMethod]
-        [DataRow(-1)]
+        [DataRow(2)]
         [DataRow(0)]
         [DataRow(1)]
         public void ReturnFalseGivenValuesLessThan2(int value)

@@ -1,0 +1,24 @@
+image: Visual Studio 2017
+configuration: Debug
+platform: Any CPU
+
+
+environment:
+  matrix:
+    - test_cmd: packages\xunit.runner.console.2.4.1\tools\net452\xunit.console xUnitProject\bin\Debug\xUnitProject.dll -xml xunit.xml
+    - test_cmd: packages\NUnit.ConsoleRunner.3.9.0\tools\nunit3-console.exe NUnitExample\bin\Debug\NUnitExample.dll
+    - test_cmd: dotnet test MsTestExample --logger trx -o .
+        
+  
+before_build:
+  - nuget restore
+
+build_script:
+  - msbuild 
+  
+after_build:
+test_script:
+  - "%test_cmd%"
+
+on_finish:
+  - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py | python

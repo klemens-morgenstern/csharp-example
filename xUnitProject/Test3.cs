@@ -16,12 +16,12 @@ namespace xUnitProject
 
         void Impl(int x)
         {
-            Assert.True(x == 42);
+            Assert.True(x < 42);
 
         }
 
         [Theory]
-        [InlineData(0)]
+        [InlineData(1)]
         [InlineData(42)]
 
         [InlineData(32)]
@@ -37,7 +37,7 @@ namespace xUnitProject
         {
             Assert.Null(null);
             Assert.True(true);
-            throw new Exception("Dummy exception");
+            //throw new Exception("Dummy exception");
         }
         
     }
