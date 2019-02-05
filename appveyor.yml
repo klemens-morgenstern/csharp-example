@@ -1,12 +1,12 @@
-os: Visual Studio 2015
+os: Visual Studio 2017
 configuration: Debug
 platform: x64
 
-environment:
-  PATH: "%BOOST_LIBRARYDIR%;%PATH%"
+#environment:
+  #PATH: "%BOOST_LIBRARYDIR%;%PATH%"
 
 build_script:
-  - dotnet build
+  - msbuild
   
 after_build:
 before_build:
