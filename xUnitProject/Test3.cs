@@ -16,7 +16,7 @@ namespace xUnitProject
 
         void Impl(int x)
         {
-            Assert.True(x < 42);
+            Assert.True(x <= 42);
 
         }
 
