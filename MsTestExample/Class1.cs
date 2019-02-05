@@ -8,12 +8,12 @@ namespace CSharpExample
         [TestMethod]
         public void func1()
         {
-//            Assert.Fail();
+            Assert.Fail();
         }
 
         void nested()
         {
-            Assert.AreEqual(2,2);
+            Assert.AreEqual(3,2);
 
         }
         
@@ -29,7 +29,7 @@ namespace CSharpExample
         [DataRow(1)]
         public void ReturnFalseGivenValuesLessThan2(int value)
         {
-            Assert.IsFalse(value < 0, $"{value} should not be prime");
+            Assert.IsFalse(value <= 0, $"{value} should not be prime");
         }
         
     }
