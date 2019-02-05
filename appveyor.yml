@@ -1,0 +1,17 @@
+os: Visual Studio 2015
+configuration: Debug
+platform: x64
+
+environment:
+  PATH: "%BOOST_LIBRARYDIR%;%PATH%"
+
+build_script:
+  - msbuild CSharpExample.sln
+  
+after_build:
+before_build:
+test_script:
+
+
+on_finish:
+  - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py > upload.py
