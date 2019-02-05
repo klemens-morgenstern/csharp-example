@@ -7,7 +7,7 @@ environment:
   matrix:
     - test_cmd: packages\xunit.runner.console.2.4.1\tools\net452\xunit.console xUnitProject\bin\Debug\xUnitProject.dll -xml xunit.xml
     - test_cmd: packages\NUnit.ConsoleRunner.3.9.0\tools\nunit3-console.exe NUnitExample\bin\Debug\NUnitExample.dll
-    - test_cmd: dotnet test MsTestExample --logger trx
+    - test_cmd: dotnet test MsTestExample --logger trx -o .
         
   
 before_build:
