@@ -1,6 +1,6 @@
 os: Visual Studio 2017
 configuration: Debug
-platform: x64
+platform: x32
 
 #environment:
   #PATH: "%BOOST_LIBRARYDIR%;%PATH%"
