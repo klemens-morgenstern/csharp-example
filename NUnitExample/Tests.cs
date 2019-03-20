@@ -9,7 +9,7 @@ namespace NUnitExample
         [Test]
         public void Test1()
         {
-            Assert.True(true);
+           // Assert.True(24);
         }
         [Test]
         public void Test2()
@@ -21,7 +21,7 @@ namespace NUnitExample
 
         void nested()
         {
-           // Assert.Fail();
+           Assert.Fail2();
         }
         [Test]
         public void Test3()

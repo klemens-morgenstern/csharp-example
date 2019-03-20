@@ -11,9 +11,9 @@ namespace CSharpExample
 //            Assert.Fail();
         }
 
-        void nested()
+        void nested(int i)
         {
-            Assert.AreEqual(2,2);
+            Assert.AreEqual(i,2);
 
         }
         

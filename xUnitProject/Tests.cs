@@ -10,12 +10,17 @@ namespace xUnitProject
             Assert.True(true);
             Assert.False(false);
         }
-        
+
+        void nested()
+        {
+            Assert.True(42);
+        }
         [Fact]
         public void Test2()
         {
+            nested();
             Assert.Null(null);
-            Assert.False(false);
+            Assert.False(0);
         }
         
     }
@@ -26,7 +31,7 @@ namespace xUnitProject
         public void Test1()
         {
             Assert.True(true);
-            Assert.False(false);
+            Assert.False(0);
         }
         
         [Fact]
