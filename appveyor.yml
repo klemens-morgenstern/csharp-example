@@ -18,7 +18,7 @@ before_build:
   - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/annotate.py > annotate.py 
   
 build_script:
-  - msbuild %target% | python annotate.py --tool net --name %target% --log_title %target%/%target%.csproj --tee
+  - msbuild %target% /p:AnyCPU | python annotate.py --tool net --name %target% --log_title %target%/%target%.csproj --tee
   
 after_build:
 test_script:
