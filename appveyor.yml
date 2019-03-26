@@ -1,6 +1,6 @@
 image: Visual Studio 2017
 configuration: Debug
-platform: x64
+platform: Any CPU
 
 
 environment:
@@ -18,7 +18,7 @@ before_build:
   - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/annotate.py > annotate.py 
   
 build_script:
-  - msbuild %target% | python annotate.py --tool net --name %target% --log_title %target%/%target%.csproj --tee
+  - msbuild CSharpExample.sln /t:%target%  | python annotate.py --tool net --name %target% --log_title %target%/%target%.csproj --tee
   
 after_build:
 test_script:
