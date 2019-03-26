@@ -6,15 +6,19 @@ platform: Any CPU
 environment:
   matrix:
     - test_cmd: packages\xunit.runner.console.2.4.1\tools\net452\xunit.console xUnitProject\bin\Debug\xUnitProject.dll -xml xunit.xml
+      target: xUnitProject
     - test_cmd: packages\NUnit.ConsoleRunner.3.9.0\tools\nunit3-console.exe NUnitExample\bin\Debug\NUnitExample.dll
+      target: NUnitExample
     - test_cmd: dotnet test MsTestExample --logger trx -o .
+      target: MsTestExample
         
   
 before_build:
   - nuget restore
-
+  - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/annotate.py > annotate.py 
+  
 build_script:
-  - msbuild 
+  - msbuild %target% | python annotate.py --tool net --name %target% --log_title %target%/%target%.csproj --tee
   
 after_build:
 test_script:
