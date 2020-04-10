@@ -16,7 +16,7 @@ namespace xUnitProject
 
         void Impl(int x)
         {
-            Assert.True(x <= 42);
+            Assert.True(x < 42);
 
         }
 
@@ -37,7 +37,7 @@ namespace xUnitProject
         {
             Assert.Null(null);
             Assert.True(true);
-            //throw new Exception("Dummy exception");
+            throw new Exception("Dummy exception");
         }
         
     }

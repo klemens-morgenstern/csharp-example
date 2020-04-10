@@ -15,7 +15,7 @@ namespace xUnitProject
         public void Test2()
         {
             Assert.Null(null);
-            Assert.False(false);
+            Assert.False(true);
         }
         
     }
@@ -26,7 +26,7 @@ namespace xUnitProject
         public void Test1()
         {
             Assert.True(true);
-            Assert.False(false);
+            Assert.True(false);
         }
         
         [Fact]
